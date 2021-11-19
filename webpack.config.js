@@ -32,17 +32,19 @@ const config = {
                 ]
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                loader: "file-loader",
-                options: {
-                    outputPath: 'images',
+                test: /\.(png|jpg|svg|jpeg|gif)$/i,
+                type: 'asset/resource',
+                exclude: /(\/fonts)/,
+                generator:{
+                    filename: './images/[name][ext]'
                 }
             },
             {
-                test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                loader: "file-loader",
-                options: {
-                    outputPath: 'fonts',
+                test: /\.(woff(2)?|svg|ttf|eot|otf)$/,
+                type: 'asset/resource',
+                include: /(\/fonts)/,
+                generator:{
+                    filename: './fonts/[name][ext]'
                 }
             }
         ],
