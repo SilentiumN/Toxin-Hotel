@@ -1,7 +1,114 @@
-@import "src/components/color_square/color_square";
-
 .color_panel {
   width: 21vw;
   height: 68vh;
   margin: 16vh 0vw 16vh 10.3vw;
+}
+
+.container {
+  display: flex;
+  font-size: 16px;
+}
+
+$side_square:4.86vw;
+$green:#6FCF97;
+$purple:#BC9CFF;
+$dark_shade:#1F2041;
+
+.green {
+  background: $green;
+}
+
+.purple {
+  background: $purple;
+}
+
+.dark_shade {
+  background: $dark_shade;
+}
+
+.square_info {
+  width: 21vw;
+  height: 7.8vh;
+  margin-bottom: 2.2vh;
+}
+
+.square_info h1 {
+  font-family: Montserrat-Bold;
+  font-size: 1.2rem;
+}
+
+.square_info p {
+  font-family: Montserrat-Regular;
+  font-size: 1.2rem;
+}
+
+.square {
+  width: $side_square;
+  height: $side_square;
+  border-radius: 6px;
+  float: left;
+  margin-right: 3vw;
+}
+
+.square_dsc {
+  height: 6.2vh;
+  padding-top: 1vh;
+  line-height: 3vh;
+}
+
+.h1,.h2,.h3 {
+  font-family: Montserrat-Bold;
+  line-height: 123%;
+  color: $dark_shade;
+}
+
+.h1 {
+  font-size: 1.5rem;
+}
+
+.h2 {
+  font-size: 1.2rem;
+}
+
+.h3 {
+  font-size: 0.75rem;
+  font-style: normal;
+
+}
+
+.body {
+  font-family: Montserrat-Regular;
+  font-size: 0.9rem;
+  line-height: 171%;
+  color: $dark_shade;
+  opacity: 0.75;
+}
+
+.font_details {
+  display: flex;
+  margin-bottom: 5.9vh;
+}
+
+.content_name {
+  color: $dark_shade;
+  opacity: 0.25;
+  font-family: Montserrat-Regular;
+  margin-right: 2.1vw;
+  width: 2vw;
+  text-align: right;
+}
+
+.content_details {
+
+}
+
+.fonts_dsc {
+  margin-left:28vw;
+  margin-top: 16vh;
+  width: 30vw;
+  height: 36vh;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
