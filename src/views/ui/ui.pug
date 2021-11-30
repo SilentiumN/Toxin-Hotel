@@ -1,3 +1,5 @@
+include ../../components/color_square/color_square
+
 doctype html
 html
     head
@@ -5,3 +7,11 @@ html
         title UI
 
     body
+        .color_panel
+            +color_square('dark_shade', 1, 'Dark Shade 100%', '#1F2041')
+            +color_square('dark_shade', 0.75, 'Dark Shade 75%', '#1F2041')
+            +color_square('dark_shade', 0.5, 'Dark Shade 50%', '#1F2041')
+            +color_square('dark_shade', 0.25, 'Dark Shade 25%', '#1F2041')
+            +color_square('dark_shade', 0.05, 'Dark Shade 5%', '#1F2041')
+            +color_square('purple', 1, 'Purple', '#BC9CFF')
+            +color_square('green', 1, 'Green', '#6FCF97')
