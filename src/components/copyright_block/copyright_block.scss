@@ -1,0 +1,18 @@
+@import "src/global";
+
+.copyright_block {
+  display: flex;
+  padding: .95em 10em;
+  justify-content: space-between;
+}
+
+.icons_social_networks {
+
+  a{
+    height: max-content;
+    svg {
+      width: 1.5rem;
+      padding-left: 2.5rem
+    }
+  }
+}

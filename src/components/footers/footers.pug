@@ -1,0 +1,22 @@
+mixin footers_ul_list (h3_name, ...li)
+    .footers_ul_menu
+        ul
+            li
+                h3.uppercase=h3_name
+            each liItem in li
+                li.link_footers
+                    a(href="")=liItem
+
+
+.footers_bar
+    .footers_content
+        .company_dsc
+            include ../../components/logo/logo
+            p.large_line_height Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+        +footers_ul_list('Навигация', 'О нас', 'Новости', 'Служба поддержки', 'Услуги')
+        +footers_ul_list('О нас', 'О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы')
+        +footers_ul_list('Служба поддержки', 'Соглашения', 'Сообщества', 'Связь с нами')
+        .subscribe_block
+            h3.uppercase Подписка
+            p.large_line_height Получайте специальные предложения и новости сервиса
+    include ../../components/copyright_block/copyright_block

@@ -1,9 +1,15 @@
 const path = require('path');
 const miniCss = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const config = {
+    devServer: {
+        port: 8000,
+        historyApiFallback: true,
+        hot: true,
+        liveReload: true,
+
+    },
     entry: [
         './src/app.js'
         ],
@@ -22,8 +28,8 @@ const config = {
             },
             {
                 test: /\.(sa|c|sc)ss$/,
+                exclude: /(\/node_modules)/,
                 use: [
-                    "style-loader",
                     miniCss.loader,
                     "css-loader",
                     "postcss-loader",
@@ -51,13 +57,9 @@ const config = {
     },
 
     plugins: [
-        new CleanWebpackPlugin(),
         new miniCss({
-            filename: './css/[name].css'
-        }),
-        new HtmlWebpackPlugin({
-            filename: './html/main.html',
-            template: 'src/main.pug'
+            filename: './css/[name].css',
+
         }),
         new HtmlWebpackPlugin({
             filename: './html/search-room.html',

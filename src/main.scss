@@ -1,15 +1,90 @@
-@import 'src/global';
-@import 'src/views/cards/cards';
-@import 'src/views/form-elements/form-elements';
-@import 'src/views/headers-footers-page/headers-footers-page';
-@import 'src/views/room-details/room-details';
-@import 'src/views/search-room/search-room';
-@import 'src/views/ui/ui';
+@import "global";
 
-html,body,h1,h2,h3,h4,h5,h6,p {
-  margin: 0;
-  padding: 0;
-  margin-block: 0;
+@mixin lhCrop($line-height) {
+  &::before {
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
+  }
 }
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font: 0.875rem/1.219 Montserrat-Regular;
+  @include lhCrop(1.219);
+  background: #ffffff;
+}
+
+h1,
+.h1{
+  @extend %h_font_type;
+  font-size: 1.5rem;
+}
+
+h2,
+.h2{
+  @extend %h_font_type;
+  font-size: 1.187rem;
+}
+
+h3,
+.h3{
+  @extend %h_font_type;
+  font-size: 0.75rem;
+}
+
+.large_line_height {
+  @include lhCrop(1.714);
+  line-height: 1.714;
+}
+
+a {
+  color: $dark_shade50;
+}
+
+p {
+  color: $dark_shade75;
+  line-height: 1.714;
+  @include lhCrop(1.714);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Background color class for square-----------------------------------------------------------------------*/
+
+.green {
+  background: $green;
+}
+
+.purple {
+  background: $purple;
+}
+
+.dark_shade100 {
+  background: $dark_shade100;
+}
+.dark_shade75 {
+  background: $dark_shade75;
+}
+.dark_shade50 {
+  background: $dark_shade50;
+}
+.dark_shade25 {
+  background: $dark_shade25;
+}
+.dark_shade5 {
+  background: $dark_shade5;
+}
+
+/*---------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
 
 

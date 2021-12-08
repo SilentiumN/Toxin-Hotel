@@ -1,0 +1,28 @@
+@import "src/global";
+
+.btn {
+  border-radius: 1.38rem;
+  box-sizing: border-box;
+  font: 0.75rem/121.9% Montserrat-Bold;
+  height: 2.125rem;
+  padding: 0 1.125rem;
+}
+
+/* style for differents buttons*/
+
+.purple_btn {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+}
+
+.purple_border {
+  border: 0.125rem solid;
+}
+
+.white_txt_in_btn {
+  color: #fff;
+}
+
+.purple_txt_in_btn {
+  color: $purple;
+}

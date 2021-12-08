@@ -1,45 +1,23 @@
-.color_panel {
-  width: 21vw;
-  height: 68vh;
-  margin: 16vh 0vw 16vh 10.3vw;
-}
+@import 'src/global';
 
-.container {
+$side_square: 4.375rem;
+
+.ui-kit {
+  margin-left: 9.375rem;
+  margin-top: 4rem;
   display: flex;
-  font-size: 16px;
+  color: $dark_shade100;
 }
 
-$side_square:4.86vw;
-$green:#6FCF97;
-$purple:#BC9CFF;
-$dark_shade:#1F2041;
-
-.green {
-  background: $green;
-}
-
-.purple {
-  background: $purple;
-}
-
-.dark_shade {
-  background: $dark_shade;
+.color_panel {
+  display: block;
+  width: 17.7rem;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 .square_info {
-  width: 21vw;
-  height: 7.8vh;
-  margin-bottom: 2.2vh;
-}
-
-.square_info h1 {
-  font-family: Montserrat-Bold;
-  font-size: 1.2rem;
-}
-
-.square_info p {
-  font-family: Montserrat-Regular;
-  font-size: 1.2rem;
+  margin-bottom: 1.55rem;
 }
 
 .square {
@@ -47,68 +25,44 @@ $dark_shade:#1F2041;
   height: $side_square;
   border-radius: 6px;
   float: left;
-  margin-right: 3vw;
+  margin-right: 2.5rem;
 }
 
 .square_dsc {
-  height: 6.2vh;
-  padding-top: 1vh;
-  line-height: 3vh;
+  padding-top: 0.7rem;
+  align-items: center;
+  max-width: 10.687rem;
 }
 
-.h1,.h2,.h3 {
-  font-family: Montserrat-Bold;
-  line-height: 123%;
-  color: $dark_shade;
+.fonts_dsc {
+  margin-left: 25.9rem;
+  width: 27.25rem;
 }
 
-.h1 {
-  font-size: 1.5rem;
-}
-
-.h2 {
-  font-size: 1.2rem;
-}
-
-.h3 {
-  font-size: 0.75rem;
-  font-style: normal;
-
-}
-
-.body {
-  font-family: Montserrat-Regular;
-  font-size: 0.9rem;
-  line-height: 171%;
-  color: $dark_shade;
-  opacity: 0.75;
-}
 
 .font_details {
   display: flex;
-  margin-bottom: 5.9vh;
 }
 
 .content_name {
-  color: $dark_shade;
-  opacity: 0.25;
+  color: $dark_shade25;
   font-family: Montserrat-Regular;
-  margin-right: 2.1vw;
-  width: 2vw;
+  width: 2.312rem;
+  margin-right: 1.8rem;
   text-align: right;
 }
 
 .content_details {
-
+  max-width: 23.062rem;
+  margin-bottom: 3.4rem;
 }
 
-.fonts_dsc {
-  margin-left:28vw;
-  margin-top: 16vh;
-  width: 30vw;
-  height: 36vh;
+.body {
+  max-width: 18.812rem;
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
+
+
+
+
+

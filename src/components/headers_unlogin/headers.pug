@@ -1,0 +1,22 @@
+include ../../components/button/button
+
+.headers
+    .logo_dsc
+        include ../../components/logo/logo
+    .navbar
+        ul
+            li.navbar_content
+                a(href="").first_elements О нас
+            li.navbar_content
+                a(href="") Услуги
+                    include ../../images/expand_more.svg
+            li.navbar_content
+                a(href="") Вакансии
+            li.navbar_content
+                a(href="") Новости
+            li.navbar_content
+                a(href="") Соглашения
+                    include ../../images/expand_more.svg
+    .navbar_btn
+        +btn('purple_border purple_txt_in_btn', 'Войти')
+        +btn('purple_btn white_txt_in_btn', 'Зарегистрироваться')

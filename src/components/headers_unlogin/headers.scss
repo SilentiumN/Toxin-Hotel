@@ -1,0 +1,40 @@
+@import 'src/global';
+
+.headers {
+  background: #ffffff;
+  display: flex;
+  height: 4.375rem;
+  width: 100%;
+}
+
+.logo_dsc {
+  display: flex;
+  margin-left: 8.75rem;
+  margin-right: 17.75rem;
+  margin-top: 0.94rem;
+}
+
+.navbar {
+  margin-top: 1.7rem;
+}
+
+.navbar_content {
+  float:left;
+  padding-right: 1.28rem;
+}
+
+.navbar_content>a>svg {
+  width: 1.55rem;
+}
+
+.first_elements {
+  font-family: Montserrat-Bold;
+  color: $dark_shade100;
+}
+
+.navbar_btn>button {
+  margin-top: 1.125rem;
+  margin-right: 1.25rem;
+
+}
+

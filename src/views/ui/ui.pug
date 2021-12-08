@@ -1,5 +1,12 @@
-include ../../components/UI/color_square
-include ../../components/UI/font_details
+mixin color_square (bg_color, h_color, dsc_color)
+    .square_info
+        .square(class=bg_color)
+        .square_dsc
+            p
+                span
+                    h2=h_color
+                =dsc_color
+
 
 doctype html
 html
@@ -8,17 +15,26 @@ html
         title UI
 
     body
-        .container
+        include ../../components/logo_grey_for_ui/logo_grey_for_ui
+        .ui-kit
             .color_panel
-                +color_square('dark_shade', 1, 'Dark Shade 100%', '#1F2041')
-                +color_square('dark_shade', 0.75, 'Dark Shade 75%', '#1F2041')
-                +color_square('dark_shade', 0.5, 'Dark Shade 50%', '#1F2041')
-                +color_square('dark_shade', 0.25, 'Dark Shade 25%', '#1F2041')
-                +color_square('dark_shade', 0.05, 'Dark Shade 5%', '#1F2041')
-                +color_square('purple', 1, 'Purple', '#BC9CFF')
-                +color_square('green', 1, 'Green', '#6FCF97')
+                +color_square('dark_shade100','Dark Shade 100%', '#1F2041')
+                +color_square('dark_shade75','Dark Shade 75%', '#1F2041')
+                +color_square('dark_shade50', 'Dark Shade 50%', '#1F2041')
+                +color_square('dark_shade25', 'Dark Shade 25%', '#1F2041')
+                +color_square('dark_shade5', 'Dark Shade 5%', '#1F2041')
+                +color_square('purple', 'Purple', '#BC9CFF')
+                +color_square('green', 'Green', '#6FCF97')
             .fonts_dsc
-                +font_details('h1', 'H1', 'This one is the sub-section or widget title')
-                +font_details('h2', 'H2', 'Next one is the item title inside widgets')
-                +font_details('h3 uppercase', 'H3', 'This is a label or CTA text')
-                +font_details('body', 'Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
+                .font_details
+                    h1.content_name H1
+                    p.content_details.h1 This one is the sub-section or widget title
+                .font_details
+                    h2.content_name H2
+                    p.content_details.h2 Next one is the item title inside widgets
+                .font_details
+                    h3.content_name H3
+                    p.content_details.h3.uppercase This is a label or CTA text
+                .font_details
+                    p.content_name Body
+                    p.content_details.large_line_height.body This is the body text which is used for most of the design, like paragraphs, lists, etc.
